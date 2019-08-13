@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.frame.org</groupId>
+    <artifactId>frame</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>frame-core</artifactId>
+  <name>框架的核心包</name>
+  <description>框架的核心包</description>
+  
+  <dependencies>
+       <dependency>
+           <groupId>tk.mybatis</groupId>
+           <artifactId>mapper</artifactId>
+       </dependency>
+       
+       <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-lang3</artifactId>
+       </dependency>
+       
+       <dependency>
+           <groupId>org.projectlombok</groupId>
+           <artifactId>lombok</artifactId>
+       </dependency>
+       
+       <dependency>
+           <groupId>com.github.pagehelper</groupId>
+           <artifactId>pagehelper-spring-boot-starter</artifactId>
+       </dependency>
+       
+       <dependency>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-web</artifactId>
+	   </dependency>
+
+       <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-swagger2</artifactId>
+       </dependency>
+
+       <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-swagger-ui</artifactId>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-data-redis</artifactId>
+       </dependency>
+	
+	   <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+	   <dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib 
+		net.sf.json-->
+		<dependency>
+		    <groupId>net.sf.json-lib</groupId>
+		    <artifactId>json-lib</artifactId>
+		    <version>2.4</version>
+		    <classifier>jdk15</classifier> 
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson 
+		com.google.gson.Gson-->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl 
+		org.codehaus.jackson.type-->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-core-asl</artifactId>
+		    <version>1.9.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl 
+		org.codehaus.jackson.map-->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>1.9.1</version>
+		</dependency>
+
+  </dependencies>
+</project>

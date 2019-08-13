@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: dev  
+#  banner: # 修改banner信息
+#    location: classpath:config/banner.txt

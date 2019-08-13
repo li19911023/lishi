@@ -1,0 +1,57 @@
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: UTF-8
+    remote-ip-header: x-forward-for
+    max-http-header-size: 8096 
+    basedir: D://file4
+
+spring:
+  # tomcat 图片配置
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 20971520
+      max-file-size: 20971520
+  # 配置redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1
+        min-idle: 0
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  
+  # 配置数据库      
+  datasource:
+    user:
+      type: com.mysql.cj.jdbc.Driver # 这是数据库8的配置   如果5.7之前的配置则改成com.mysql.jdbc.Driver,并把maven中的mysql-connect的version删除即可
+      username: root
+      password: 123456 # 不加characterEncoding  默认是数据库的character_set_database,进行自动检测
+      jdbcurl: jdbc:mysql://127.0.0.1:3306/user-demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+      maxActive: 20　　#连接池的最大值，同一时间可以从池分配的最多连接数量，0时无限制
+      initialSize: 1　　#连接初始值，连接池启动时创建的连接数量的初始值
+      maxWait: 60000
+      minIdle: 1　　#最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+  
+# 配置mybaties的xml文件信息     
+mybatis:
+#  type-aliases-package: com.burylovehome.demo.entity.po
+#  config-location: classpath:mybatis.cfg.xml # 使用这个,就不能给po使用别名,只能使用全限定名
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名
+  
+
+#  日志级别
+logging:
+  config: classpath:config/logback.xml
+  level: # 这是本地查看sql语句,正式环境不需要添加该配置
+    com.burylovehome.demo.mapper: debug
+

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: 服务的一个demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: LENOVO
+Implementation-Vendor-Id: com.frame.org
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/frame/frame-service/frame-demo
+Created-By: Maven Integration for Eclipse
+
